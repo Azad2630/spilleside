@@ -13,7 +13,11 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "ESNext",                   // Ændret fra 'preserve'
+    "moduleResolution": "node",          // VIGTIGT: Gør at @angular/* kan findes
+    "esModuleInterop": true,             // For kompatibilitet med CommonJS
+    "types": [],                         // Forhindrer globale types fra at blive loaded utilsigtet
+    "lib": ["ES2022", "DOM"]             // Sikrer DOM og moderne JS API'er
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -32,3 +36,4 @@
     }
   ]
 }
+
