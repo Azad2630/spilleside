@@ -22,7 +22,7 @@ export class GameViewerComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
-    // ✅ TILFØJET: inject servicen
+    //  TILFØJET: inject servicen
     private scoreReporter: ScoreReporterService
   ) {}
 
@@ -40,7 +40,7 @@ export class GameViewerComponent implements OnInit {
     }
   }
 
-  // ✅ TILFØJET: lyt efter beskeder fra spillet (iframe -> window.postMessage)
+  //  TILFØJET: lyt efter beskeder fra spillet (iframe -> window.postMessage)
   @HostListener('window:message', ['$event'])
   async onGameMessage(event: MessageEvent) {
     // Basal sikkerhed: accepter kun samme origin
